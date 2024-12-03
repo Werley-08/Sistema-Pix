@@ -1,5 +1,6 @@
 package view;
 
+import dao.conexaoDAO;
 import utils.ClearScreen;
 import java.util.Scanner;
 
@@ -33,6 +34,7 @@ public class loginView {
 //
 //            }
 
+            new conexaoDAO().connection();
             System.out.println("ENTRANDO NO MENU PRINCIPAL...\n");
             logado = true;
             viewMenuPrincipal.menu(scanner);

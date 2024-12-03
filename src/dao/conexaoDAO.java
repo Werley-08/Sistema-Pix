@@ -1,4 +1,40 @@
 package dao;
 
-public class conexaoDAO {
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class conexaoDAO{
+
+    public Connection connection(){
+
+        Connection conn = null;
+
+        String url = "jdbc:postgresql://localhost:5432/SGB";
+        String user = "postgres";
+        String password = "admin";
+
+        try{
+
+            conn = DriverManager.getConnection(url, user, password);
+
+            if(conn != null){
+
+                System.out.println("Conexão bem-sucedida com o PostgreSQL!");
+
+            }else{
+
+                System.out.println("Erro ao conectar ao banco de dados:");
+
+            }
+
+        }catch (SQLException e){
+
+            System.out.println(e);
+
+        }
+
+        return conn;
+
+    }
 }
