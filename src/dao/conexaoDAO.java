@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class conexaoDAO{
 
-    public Connection connection(){
+    public static Connection connection(){
 
         Connection conn = null;
 
