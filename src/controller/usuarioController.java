@@ -11,4 +11,10 @@ public class usuarioController {
 
     }
 
+    public static usuarioModel logarUsuario(String login, String senha){
+
+        return usuarioDAO.logarUsuario(login, senha);
+
+    }
+
 }

@@ -1,17 +1,21 @@
 package view;
 
+import model.usuarioModel;
 import utils.ClearScreen;
 
 import java.util.Scanner;
 
 public class viewMenuPrincipal{
 
-    public static void menu(Scanner scanner){  // Recebe o scanner como parâmetro
+    public static void menu(Scanner scanner, usuarioModel usuarioLogado){
 
         String opcion;
 
         do{
             ClearScreen.clear();
+
+            usuarioLogado.exibirUsuario();
+
             System.out.println("======== MENU PRINCIPAL ========");
             System.out.println("1 - ÁREA PIX");
             System.out.println("2 - ÁREA USUÁRIO");
