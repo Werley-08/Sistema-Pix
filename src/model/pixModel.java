@@ -1,4 +1,7 @@
 package model;
 
-public class pixModel {
+public class pixModel{
+
+
+
 }

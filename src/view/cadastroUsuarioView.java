@@ -1,14 +1,13 @@
 package view;
 
 import controller.usuarioController;
-import dao.conexaoDAO;
 import model.usuarioModel;
 import utils.ClearScreen;
 
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class cadastroView{
+public class cadastroUsuarioView {
 
     public static void cadastrar(Scanner scanner){
 
@@ -26,7 +25,7 @@ public class cadastroView{
 
         do {
             ClearScreen.clear();
-            System.out.println("========= LOGIN =========");
+            System.out.println("========= CADASTRO =========");
             System.out.println("DIGITE 'F' SE FOR PESSOA FÍSICA E 'J' SE FOR PESSOA JURÍDICA ");
             tipoPessoa = scanner.nextLine();
 
@@ -36,7 +35,7 @@ public class cadastroView{
                 cpf = scanner.nextLine();
                 cnpj = null;
 
-            }else if(tipoPessoa.equals("F")){
+            }else if(tipoPessoa.equals("J")){
 
                 System.out.println("DIGITE SEU CPNJ");
                 cnpj = scanner.nextLine();
@@ -54,7 +53,7 @@ public class cadastroView{
             senha = scanner.nextLine();
             System.out.println("DIGITE SEU NOME");
             nome = scanner.nextLine();
-            System.out.println("DIGITE SUA DATA DE NASCIMENTO");
+            System.out.println("DIGITE SUA DATA DE NASCIMENTO (yyyy-mm-dd)");
             dataDeNascimento = LocalDate.parse(scanner.nextLine());
             System.out.println("DIGITE SEU TELEFONE");
             telefone = scanner.nextLine();
@@ -66,7 +65,9 @@ public class cadastroView{
             usuarioController.adicionarUsuario(usuario);
 
             System.out.println("CADASTRO REALIZADO COM SUCESSO!\n");
-            System.out.println("REALIZE LOGIN PARA ENTRAR NO SISTEMA\n");
+
+            cadastroContaBancariaView.cadastrar(scanner, usuario);
+
             cadastrado = true;
 
         }while(!cadastrado);

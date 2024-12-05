@@ -18,16 +18,6 @@ public class conexaoDAO{
 
             conn = DriverManager.getConnection(url, user, password);
 
-            if(conn != null){
-
-                System.out.println("Conexão bem-sucedida com o PostgreSQL!");
-
-            }else{
-
-                System.out.println("Erro ao conectar ao banco de dados:");
-
-            }
-
         }catch (SQLException e){
 
             System.out.println(e);
