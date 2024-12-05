@@ -10,23 +10,13 @@ public class conexaoDAO{
 
         Connection conn = null;
 
-        String url = "jdbc:postgresql://localhost:5432/SGB";
+        String url = "jdbc:postgresql://localhost:5432/SP";
         String user = "postgres";
         String password = "admin";
 
         try{
 
             conn = DriverManager.getConnection(url, user, password);
-
-            if(conn != null){
-
-                System.out.println("Conexão bem-sucedida com o PostgreSQL!");
-
-            }else{
-
-                System.out.println("Erro ao conectar ao banco de dados:");
-
-            }
 
         }catch (SQLException e){
 

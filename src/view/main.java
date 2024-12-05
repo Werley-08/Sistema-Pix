@@ -20,7 +20,7 @@ public class main {
             opcion = scanner.nextLine();
 
             if(opcion.equals("1")) { loginView.logar(scanner); continue;}
-            if(opcion.equals("2")) { cadastroView.cadastrar(scanner); continue;}
+            if(opcion.equals("2")) { cadastroUsuarioView.cadastrar(scanner); continue;}
 
             if(opcion.equals("0")) { System.out.println("SAINDO DO SISTEMA...\n"); }
             else { System.out.println("OPÇÃO INVÁLIDA! TENTE NOVAMENTE"); }
