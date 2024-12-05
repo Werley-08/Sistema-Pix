@@ -10,9 +10,9 @@ public class conexaoDAO{
 
         Connection conn = null;
 
-        String url = "jdbc:postgresql://localhost:5432/SGB";
+        String url = "jdbc:postgresql://localhost:5432/SP";
         String user = "postgres";
-        String password = "admin";
+        String password = "camileisi";
 
         try{
 
