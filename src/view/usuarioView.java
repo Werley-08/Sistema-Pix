@@ -19,7 +19,10 @@ public class usuarioView {
             System.out.println("ESCOLHA UMA OPÇÃO: ");
             opcion = scanner.nextLine();
 
-            //if(opcion.equals("1")) { usuarioController.editarDados();}
+            //if(opcion.equals("1")) {
+            //
+            //
+            // usuarioController.editarDados();}
             //if(opcion.equals("2")) { usuarioController.deletarDados();}
             if(opcion.equals("0")) { System.out.println("VOLTANDO PARA MENU PRINCIPAL...\n");}
             else            { System.out.println("OPÇÃO INVÁLIDA! TENTE NOVAMENTE");}

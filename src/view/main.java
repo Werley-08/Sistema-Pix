@@ -22,12 +22,12 @@ public class main {
             if(opcion.equals("1")) { loginView.logar(scanner); continue;}
             if(opcion.equals("2")) { cadastroUsuarioView.cadastrar(scanner); continue;}
 
-            if(opcion.equals("0")) { System.out.println("SAINDO DO SISTEMA...\n"); }
+            if(opcion.equals("0")) { System.out.println("S1AINDO DO SISTEMA...\n"); }
             else { System.out.println("OPÇÃO INVÁLIDA! TENTE NOVAMENTE"); }
 
         } while (!opcion.equals("0"));
 
-        scanner.close();  // Fechar o scanner no final da execução
+        scanner.close();
 
     }
 
